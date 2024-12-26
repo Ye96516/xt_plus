@@ -1,0 +1,18 @@
+[gd_resource type="Theme" load_steps=3 format=3 uid="uid://da6pcranwj2hi"]
+
+[ext_resource type="FontFile" uid="uid://ho8y8ybomsen" path="res://data/晚安喵.ttf" id="1_tn8ma"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_6rbtk"]
+bg_color = Color(0.307861, 0.666941, 0.664938, 1)
+
+[resource]
+Button/font_sizes/font_size = 48
+Button/fonts/font = ExtResource("1_tn8ma")
+Label/font_sizes/font_size = 64
+Label/fonts/font = ExtResource("1_tn8ma")
+LineEdit/font_sizes/font_size = 48
+RichTextLabel/font_sizes/normal_font_size = 64
+RichTextLabel/fonts/normal_font = ExtResource("1_tn8ma")
+TooltipLabel/font_sizes/font_size = 32
+TooltipLabel/fonts/font = ExtResource("1_tn8ma")
+TooltipPanel/styles/panel = SubResource("StyleBoxFlat_6rbtk")

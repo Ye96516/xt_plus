@@ -1,0 +1,122 @@
+[gd_scene load_steps=6 format=3 uid="uid://b6a28kmyn8oav"]
+
+[ext_resource type="Script" path="res://scenes/setting_menu/setting_menu.gd" id="1_dy3eg"]
+[ext_resource type="StyleBox" path="res://data/setting_menu.tres" id="2_pgmwu"]
+[ext_resource type="Theme" uid="uid://da6pcranwj2hi" path="res://data/new_theme.tres" id="3_4y5ja"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_boqmg"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_sk8un"]
+bg_color = Color(0.6, 0.764706, 0.6, 1)
+corner_radius_top_left = 30
+corner_radius_top_right = 30
+corner_radius_bottom_right = 30
+corner_radius_bottom_left = 30
+
+[node name="SettingMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_dy3eg")
+metadata/_edit_lock_ = true
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Control" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+metadata/_edit_lock_ = true
+
+[node name="Questions" type="Button" parent="CanvasLayer"]
+offset_left = 952.0
+offset_top = 416.0
+offset_right = 1296.0
+offset_bottom = 664.0
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_font_sizes/font_size = 128
+theme_override_styles/focus = ExtResource("2_pgmwu")
+theme_override_styles/hover = ExtResource("2_pgmwu")
+theme_override_styles/normal = ExtResource("2_pgmwu")
+text = "确定"
+metadata/_edit_lock_ = true
+
+[node name="LineEdit" type="LineEdit" parent="CanvasLayer"]
+offset_left = 424.0
+offset_top = 464.0
+offset_right = 912.0
+offset_bottom = 619.0
+theme_override_font_sizes/font_size = 78
+theme_override_styles/focus = SubResource("StyleBoxEmpty_boqmg")
+theme_override_styles/normal = SubResource("StyleBoxFlat_sk8un")
+placeholder_text = "请输入数字："
+metadata/_edit_lock_ = true
+
+[node name="AffectMain" type="Control" parent="CanvasLayer"]
+layout_mode = 3
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+metadata/_edit_lock_ = true
+
+[node name="StemButton" type="Button" parent="CanvasLayer/AffectMain"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 351.0
+offset_top = 89.0
+offset_right = 668.0
+offset_bottom = 198.0
+text = "改变题干颜色"
+
+[node name="RestStemCl" type="Button" parent="CanvasLayer/AffectMain"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 254.0
+offset_top = 89.0
+offset_right = 350.0
+offset_bottom = 194.0
+text = "重置"
+
+[node name="BackgroundVisiable" type="Button" parent="CanvasLayer/AffectMain"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 829.0
+offset_top = 89.0
+offset_right = 1146.0
+offset_bottom = 198.0
+text = "背景可见性"
+
+[node name="Waiting" type="Button" parent="CanvasLayer/AffectMain"]
+unique_name_in_owner = true
+layout_mode = 0
+offset_left = 1374.0
+offset_top = 89.0
+offset_right = 1691.0
+offset_bottom = 198.0
+text = "敬请期待"
+
+[node name="ColorPicker" type="ColorPicker" parent="CanvasLayer/AffectMain"]
+visible = false
+z_index = 1
+layout_mode = 0
+offset_left = 517.0
+offset_top = 87.0
+offset_right = 1236.0
+offset_bottom = 899.0
+theme = ExtResource("3_4y5ja")
+presets_visible = false
+
+[connection signal="gui_input" from="CanvasLayer/Control" to="." method="_on_control_gui_input"]
+[connection signal="pressed" from="CanvasLayer/Questions" to="." method="_on_questions_pressed"]
+[connection signal="text_changed" from="CanvasLayer/LineEdit" to="." method="_on_line_edit_text_changed"]
+[connection signal="text_submitted" from="CanvasLayer/LineEdit" to="." method="_on_line_edit_text_submitted"]
+[connection signal="pressed" from="CanvasLayer/AffectMain/StemButton" to="." method="_on_stem_button_pressed"]
+[connection signal="pressed" from="CanvasLayer/AffectMain/RestStemCl" to="." method="_on_rest_stem_cl_pressed"]
+[connection signal="pressed" from="CanvasLayer/AffectMain/BackgroundVisiable" to="." method="_on_background_visiable_pressed"]
+[connection signal="color_changed" from="CanvasLayer/AffectMain/ColorPicker" to="." method="_on_color_picker_color_changed"]

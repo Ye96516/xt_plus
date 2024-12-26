@@ -1,0 +1,269 @@
+[gd_scene load_steps=16 format=3 uid="uid://bhjc4uae67bb"]
+
+[ext_resource type="Script" path="res://scenes/random_question/random_question.gd" id="1_0381e"]
+[ext_resource type="Texture2D" uid="uid://bun8ktf5uidv6" path="res://data/灰与幻想.jpg" id="1_cldvt"]
+[ext_resource type="Script" path="res://scenes/random_question/correct_answer.gd" id="3_bgk6u"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1yowu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_hf3rf"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_0ec8w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_xvsux"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7bejk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mrvw8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_5vls2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7ypie"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_phuqb"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4t6r8"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ysb10"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mcm6o"]
+
+[node name="RandomQuestion" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0381e")
+
+[node name="Background" type="TextureRect" parent="."]
+unique_name_in_owner = true
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_cldvt")
+
+[node name="QuestionStem" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_right = 1.0
+anchor_bottom = 0.381
+offset_right = -2.0
+offset_bottom = -0.480011
+grow_horizontal = 2
+bbcode_enabled = true
+text = "1.依据《城市轨道交通信号系统运营技术规范（试行）》（交办运〔2022〕1号），信号系统应具备故障分级报警功能，报警信息至少包括等级、设备、时间、地点、内容、原因，报警等级按照对列车运行影响程度从高到低分为（）。"
+autowrap_mode = 1
+
+[node name="One" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -56.0
+offset_top = -360.0
+offset_right = -56.0
+offset_bottom = -360.0
+
+[node name="A" type="Label" parent="One"]
+layout_mode = 0
+offset_left = 96.0
+offset_top = 792.0
+offset_right = 156.0
+offset_bottom = 880.0
+theme_override_font_sizes/font_size = 64
+text = "A."
+
+[node name="OptionOne" type="Button" parent="One"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.084
+anchor_top = 0.726
+anchor_right = 0.176
+anchor_bottom = 0.817
+offset_left = 160.0
+offset_top = 792.0
+offset_right = 552.0
+offset_bottom = 880.0
+theme_override_font_sizes/font_size = 48
+text = "二级"
+autowrap_mode = 3
+
+[node name="Two" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -184.0
+offset_top = -360.0
+offset_right = -144.0
+offset_bottom = -320.0
+
+[node name="B" type="Label" parent="Two"]
+layout_mode = 0
+offset_left = 704.0
+offset_top = 792.0
+offset_right = 764.0
+offset_bottom = 880.0
+theme_override_font_sizes/font_size = 64
+text = "B."
+
+[node name="OptionTwo" type="Button" parent="Two"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.401
+anchor_top = 0.728
+anchor_right = 0.5
+anchor_bottom = 0.822
+offset_left = 743.96
+offset_top = 762.88
+offset_right = 1132.0
+offset_bottom = 847.12
+theme_override_font_sizes/font_size = 48
+text = "三级"
+autowrap_mode = 3
+
+[node name="Three" type="Control" parent="."]
+anchors_preset = 0
+offset_left = -336.0
+offset_top = -368.0
+offset_right = -296.0
+offset_bottom = -328.0
+
+[node name="C" type="Label" parent="Three"]
+layout_mode = 0
+offset_left = 1328.0
+offset_top = 800.0
+offset_right = 1388.0
+offset_bottom = 888.0
+theme_override_font_sizes/font_size = 64
+text = "C."
+
+[node name="OptionThree" type="Button" parent="Three"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.629
+anchor_top = 0.72
+anchor_right = 0.721
+anchor_bottom = 0.811
+offset_left = 1366.84
+offset_top = 771.2
+offset_right = 1723.16
+offset_bottom = 855.56
+theme_override_font_sizes/font_size = 48
+text = "四级"
+autowrap_mode = 3
+
+[node name="Four" type="Control" parent="."]
+anchors_preset = 0
+offset_left = 112.0
+offset_top = -360.0
+offset_right = 152.0
+offset_bottom = -320.0
+
+[node name="D" type="Label" parent="Four"]
+layout_mode = 0
+offset_left = 1328.0
+offset_top = 800.0
+offset_right = 1388.0
+offset_bottom = 888.0
+theme_override_font_sizes/font_size = 64
+text = "D."
+
+[node name="OptionFour" type="Button" parent="Four"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.629
+anchor_top = 0.72
+anchor_right = 0.721
+anchor_bottom = 0.811
+offset_left = 1366.84
+offset_top = 771.2
+offset_right = 1755.16
+offset_bottom = 855.56
+theme_override_font_sizes/font_size = 48
+text = "五级"
+autowrap_mode = 3
+
+[node name="CorrectAnswer" type="RichTextLabel" parent="."]
+unique_name_in_owner = true
+layout_mode = 1
+anchors_preset = -1
+anchor_left = -0.001
+anchor_top = 0.69
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 0.92
+offset_top = -0.200073
+offset_right = 1.0
+grow_horizontal = 2
+grow_vertical = 0
+text = "                        C.四级"
+script = ExtResource("3_bgk6u")
+
+[node name="NextQuestion" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.885
+anchor_top = 0.57
+anchor_right = 0.989
+anchor_bottom = 0.673
+offset_left = 0.799927
+offset_top = 0.399963
+offset_right = -0.880005
+offset_bottom = 0.159973
+theme_override_styles/focus = SubResource("StyleBoxEmpty_1yowu")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_hf3rf")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_0ec8w")
+text = "下一题"
+
+[node name="LastQuestion" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.779
+anchor_top = 0.571
+anchor_right = 0.878
+anchor_bottom = 0.674
+offset_left = -0.680054
+offset_top = 0.319946
+offset_right = -0.76001
+offset_bottom = 0.0799561
+theme_override_styles/focus = SubResource("StyleBoxEmpty_xvsux")
+theme_override_styles/disabled = SubResource("StyleBoxEmpty_7bejk")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_mrvw8")
+text = "上一题"
+
+[node name="HideAnswer" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.879
+anchor_right = 1.0
+anchor_bottom = 0.153
+offset_left = 0.319824
+offset_bottom = 18.76
+theme_override_styles/focus = SubResource("StyleBoxEmpty_5vls2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_7ypie")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_phuqb")
+
+[node name="AppearSetting" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.439
+anchor_right = 0.576
+anchor_bottom = 0.131
+offset_left = -0.880005
+offset_top = 1.0
+offset_right = -0.920044
+offset_bottom = 0.519989
+theme_override_styles/focus = SubResource("StyleBoxEmpty_4t6r8")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ysb10")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_mcm6o")
+
+[connection signal="pressed" from="One/OptionOne" to="." method="_on_option_one_pressed"]
+[connection signal="pressed" from="Two/OptionTwo" to="." method="_on_option_two_pressed"]
+[connection signal="pressed" from="Three/OptionThree" to="." method="_on_option_three_pressed"]
+[connection signal="pressed" from="Four/OptionFour" to="." method="_on_option_four_pressed"]
+[connection signal="pressed" from="NextQuestion" to="." method="_on_next_question_pressed"]
+[connection signal="pressed" from="LastQuestion" to="." method="_on_last_question_pressed"]
+[connection signal="pressed" from="HideAnswer" to="." method="_on_hide_answer_pressed"]
+[connection signal="pressed" from="AppearSetting" to="." method="_on_appear_setting_pressed"]

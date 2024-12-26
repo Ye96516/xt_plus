@@ -1,0 +1,61 @@
+[gd_scene load_steps=2 format=3 uid="uid://cnqw7nhwsf0r1"]
+
+[ext_resource type="Script" path="res://scenes/random_ui/random_ui.gd" id="1_jut33"]
+
+[node name="RandomUI" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jut33")
+
+[node name="AllNumber" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -438.0
+offset_top = 53.0
+offset_right = 372.0
+offset_bottom = 210.0
+grow_horizontal = 2
+placeholder_text = "请输入总题数"
+
+[node name="SingleChoice" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -438.0
+offset_top = 237.0
+offset_right = 372.0
+offset_bottom = 394.0
+grow_horizontal = 2
+placeholder_text = "请输入单选题数"
+
+[node name="MultipleChoice" type="LineEdit" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -438.0
+offset_top = 428.0
+offset_right = 372.0
+offset_bottom = 585.0
+grow_horizontal = 2
+placeholder_text = "请输入多选题数"
+
+[node name="BoolQuestion" type="LineEdit" parent="."]
+layout_mode = 0
+offset_left = 527.0
+offset_top = 663.0
+offset_right = 1331.0
+offset_bottom = 829.0
+placeholder_text = "请输入判断题术"
+
+[connection signal="text_submitted" from="AllNumber" to="." method="_on_all_number_text_submitted"]
+[connection signal="text_submitted" from="SingleChoice" to="." method="_on_single_choice_text_submitted"]
+[connection signal="text_submitted" from="MultipleChoice" to="." method="_on_multiple_choice_text_submitted"]
+[connection signal="text_submitted" from="BoolQuestion" to="." method="_on_bool_question_text_submitted"]
